@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url("https://fonts.cdnfonts.com/css/miama");
 /* browser reset code */
 
 * {
@@ -30,6 +29,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  background-color: black;
+}
+
 /* shared styling */
 .container {
   max-width: 1060px;
@@ -49,7 +52,12 @@ button {
 .primary-color {
   color: rgb(230, 83, 60);
 }
-
+/* @font-face {
+  font-family: 'Miama';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Miama'), url('https://fonts.cdnfonts.com/s/302/Miama-Regular.woff') format('woff');
+} */
 /* navbar section styling */
 
 header {
@@ -133,13 +141,10 @@ header {
   line-height: 1.2;
 }
 .banner-content > h1 span {
+  font-family: "Miama";
   font-style: italic;
-  font-weight: normal;
-  font-family: "Cursive", sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
   font-size: 1.2em;
-
-  font-family: "Cedarville Cursive", cursive;
 }
 .banner-content > p {
   margin: 25px 0;
@@ -173,6 +178,7 @@ header {
   position: absolute;
   top: 120px;
   right: -70px;
+  backdrop-filter: blur(20px);
 }
 
 .banner-img .video-info h3 {
@@ -194,6 +200,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 5px;
+  backdrop-filter: blur(20px);
 }
 .banner-img .video-info-2 .rounded-box {
   width: 40px;
@@ -252,8 +259,6 @@ header {
 
   .banner-img .video-info-2 .inner-content p {
     font-size: 1.2rem;
-
-  
   }
 
   .banner-img .video-info h3 {
@@ -263,12 +268,67 @@ header {
     font-size: 1rem;
   }
   .banner-img {
-    border: 2px solid red;
+ 
     flex-basis: 100%;
   }
 
   .button-container > button {
     font-size: 1.4rem;
     padding: 10px 20px;
+  }
+}
+
+/* habit section styling */
+
+.habit-section {
+  margin: 100px 0;
+  padding: 0 15px;
+  color: white;
+  text-align: center;
+}
+.habit-section > h2 {
+  font-size: 4.8rem;
+  font-weight: 900;
+}
+.habit-section .fitness-description {
+  font-size: 1.4rem;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.gym-info {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  margin-top: 50px;
+}
+
+.gym-info .gym-person h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 8px 0;
+}
+.gym-info .gym-person img {
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 576px) {
+  .habit-section {
+    margin: 10px 0;
+  }
+
+  .habit-section > h2 {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  .gym-info {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .gym-info .gym-person {
+    width: 60%;
   }
 }
