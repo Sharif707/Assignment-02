@@ -113,7 +113,7 @@ header {
 
 @media screen and (max-width: 576px) {
   header {
-    padding: 25px 20 px;
+    padding: 25px 20px;
   }
   .mobile-nav {
     display: flex;
@@ -126,9 +126,10 @@ header {
 }
 
 /* banner section styling */
-main {
+/* main {
   padding: 0 20px;
-}
+  position: relative;
+} */
 .banner-section {
   display: flex;
   align-items: center;
@@ -318,6 +319,9 @@ main {
 }
 
 @media screen and (max-width: 576px) {
+  main {
+    padding: 0 20px;
+  }
   .habit-section {
     margin: 10px 0;
   }
@@ -345,6 +349,7 @@ main {
   display: flex;
   align-items: center;
   gap: 60px;
+  margin-bottom: 50px;
 }
 .extra-mile-content {
   flex-basis: 50%;
@@ -370,7 +375,7 @@ main {
   .extra-mile {
     padding: 30px 35px;
     flex-direction: column;
-    margin: 65px 0;
+    margin: 30px 0;
     gap: 30px;
   }
 
@@ -385,6 +390,133 @@ main {
 
   .extra-mile-img {
     flex: 1;
+  }
+}
+/* table section styling */
+
+.bmi-section {
+  background: rgb(34, 34, 34);
+
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+.bmi-header {
+  font-size: 4.8rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.7px;
+}
+.bmi-container {
+  display: flex;
+  gap: 40px;
+
+ 
+}
+.table {
+  border-collapse: collapse;
+  margin-top: 50px;
+}
+.table th,
+td {
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.table th {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: left !important;
+}
+
+.table td {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.calculator-header {
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.7px;
+}
+.table-container {
+  flex: 1;
+
+}
+.form-calculator {
+  flex-basis: 54%;
+  
+}
+.form-input {
+  margin-bottom: 12px;
+}
+.form-input input,
+select {
+  padding: 12px 20px;
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.6rem;
+  margin-right: 12px;
+  width: 46%;
+  border: none;
+  outline: none;
+}
+
+.form-button {
+  color: white;
+  margin-right: 100%;
+}
+
+.bm-form {
+  padding: 0 12px;
+}
+.full-width > select {
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .bmi-section{
+    margin: 0 -20px;
+  }
+  .bmi-section > p{
+    width: 80%;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.3px;
+   
+  }
+  .bmi-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .bmi-header {
+    font-size: 3rem;
+  }
+  .table-container {
+    width: 100%;
+    margin-left: 20px;
+  }
+  .form-calculator {
+    width: 100%;
+  }
+
+  .calculator-header {
+    font-size: 2.2rem;
+  }
+  .form-calculator > p {
+    font-size: 1.2rem;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+  }
+  .form-input{
+    margin: 0;
+  }
+  .form-input input,
+  select {
+    width: 45%;
+    margin-bottom: 12px;
   }
 }
 
@@ -506,7 +638,7 @@ footer {
   font-size: 2.3rem;
 }
 .footer-paragraph {
- padding: 35px 0;
+  padding: 35px 0;
   color: rgba(255, 255, 255, 0.5);
 
   font-size: 2rem;
